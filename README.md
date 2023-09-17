@@ -22,6 +22,7 @@ I have trained a LSTM based deep learning model to output score for 6 different 
 - threat
 - insult
 - identity_hate
+
 The model implementation and inference is under [./toxicModel/](https://github.com/chiragdeep01/Toxic-Comment-Scoring/tree/main/toxicModel)
 ## API
 I have created an API using FASTAPI to generate predictions and for that you can just use the [run.py](https://github.com/chiragdeep01/Toxic-Comment-Scoring/blob/main/run.py) file:
