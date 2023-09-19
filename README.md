@@ -9,7 +9,7 @@ git clone https://github.com/chiragdeep01/Toxic-Comment-Scoring.git
 ```
 - Create Enviroment:
 ```console
-conda create -n toxic python==3.10
+conda create -n toxic python==3.11.5
 cd Toxic-Comment-Scoring
 pip install -r requirements.txt
 ````
