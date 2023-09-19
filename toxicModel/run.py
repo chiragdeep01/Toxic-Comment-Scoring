@@ -36,7 +36,7 @@ class Model:
             if 'GPU' in device.device_type:
                 gpu_id = int(device.name.split(':')[-1])
                 break
-        if gpu_id>=0:
+        if gpu_id is not None and gpu_id>=0:
             self.device = "/gpu:" + str(gpu_id)
             print(f"GPU ID FOUND BY AUTO DETECT>> {gpu_id}")
         else:
