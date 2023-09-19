@@ -8,7 +8,6 @@ certifi==2023.7.22
 charset-normalizer==3.2.0
 click==8.1.7
 contractions==0.1.73
-exceptiongroup==1.1.3
 fastapi==0.103.1
 flatbuffers==23.5.26
 gast==0.4.0
@@ -24,8 +23,6 @@ libclang==16.0.6
 Markdown==3.4.4
 MarkupSafe==2.1.3
 numpy==1.24.3
-nvidia-cublas-cu11==11.11.3.6
-nvidia-cudnn-cu11==8.6.0.163
 oauthlib==3.2.2
 opt-einsum==3.3.0
 packaging==23.1
@@ -34,8 +31,7 @@ protobuf==4.24.3
 pyahocorasick==2.0.0
 pyasn1==0.5.0
 pyasn1-modules==0.3.0
-pydantic==2.3.0
-pydantic_core==2.6.3
+pydantic==1.10.12
 requests==2.31.0
 requests-oauthlib==1.3.1
 rsa==4.9
@@ -50,7 +46,7 @@ tensorflow-estimator==2.13.0
 tensorflow-io-gcs-filesystem==0.34.0
 termcolor==2.3.0
 textsearch==0.0.24
-typing_extensions==4.7.1
+typing_extensions==4.5.0
 urllib3==1.26.16
 uvicorn==0.23.2
 Werkzeug==2.3.7

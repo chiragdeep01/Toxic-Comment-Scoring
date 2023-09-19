@@ -11,6 +11,7 @@ class Model:
         
         if device=="cpu":
             os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+            self.device = '/cpu:0'
         elif device=="auto":
             self.find_id()
         else:
@@ -21,6 +22,12 @@ class Model:
         with open('weights/tokenizer.pickle', 'rb') as handle:
             self.tokenizer = pickle.load(handle)
             
+        self.warmup()
+            
+    def warmup(self):
+        for _ in range(5):
+            self.predict("hi how are you")
+        
     def find_id(self):
         visible_devices = tf.config.experimental.get_visible_devices()
         gpu_id = None
@@ -30,9 +37,10 @@ class Model:
                 gpu_id = int(device.name.split(':')[-1])
                 break
         if gpu_id>=0:
-            self.device = "gpu:" + str(gpu_id)
+            self.device = "/gpu:" + str(gpu_id)
             print(f"GPU ID FOUND BY AUTO DETECT>> {gpu_id}")
         else:
+            self.device = '/cpu:0'
             print("NO GPU ID FOUND BY AUTO DETECT LOADING MODEL ON CPU. IF YOU THINK THIS IS A MISTAKE PASS DEIVCE eg:'gpu:0'")
             os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
             
