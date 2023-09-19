@@ -7,6 +7,12 @@ In the modern era of online communication, managing and moderating user-generate
 ```console
 git clone https://github.com/chiragdeep01/Toxic-Comment-Scoring.git
 ```
+If you want to only access the api, you can use docker also:
+```console
+docker compose build
+docker compose up
+```
+For Python:
 - Create Enviroment:
 ```console
 conda create -n toxic python==3.11.5
